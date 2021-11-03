@@ -1,0 +1,6 @@
+ALTER TABLE IF EXISTS public."Subject"
+    ADD CONSTRAINT "course_ID_fk" FOREIGN KEY ("course_ID")
+    REFERENCES public."Course" ("course_ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;

@@ -1,0 +1,6 @@
+ALTER TABLE IF EXISTS public."Transaction"
+    ADD CONSTRAINT "stud_ID_fk" FOREIGN KEY ("stud_ID")
+    REFERENCES public."Student" ("stud_ID") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
