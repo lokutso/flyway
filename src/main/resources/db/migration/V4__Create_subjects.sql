@@ -1,7 +1,14 @@
-CREATE TABLE IF NOT EXISTS public."Subject"
+CREATE TABLE IF NOT EXISTS public.subject
 (
-    "sub_ID" integer,
+    id integer,
     name character varying(255) NOT NULL,
-    "course_ID" integer NOT NULL,
-    PRIMARY KEY ("sub_ID")
+    course_id integer NOT NULL,
+    PRIMARY KEY (id)
 );
+
+ALTER TABLE IF EXISTS public.subject
+    ADD CONSTRAINT course_id_fk FOREIGN KEY (course_id)
+    REFERENCES public.course (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;

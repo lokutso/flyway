@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS public."Student"
+CREATE TABLE IF NOT EXISTS public.student
 (
-    "stud_ID" integer,
+    id integer,
     fname character varying(255) NOT NULL,
     lname character varying(255) NOT NULL,
     gender integer NOT NULL,
     age integer NOT NULL,
-    stud_email character varying(255) NOT NULL,
-    stud_password character varying(255) NOT NULL,
-    PRIMARY KEY ("stud_ID")
+    email character varying(255) NOT NULL,
+    password character varying(255) NOT NULL,
+    PRIMARY KEY (id)
 );
